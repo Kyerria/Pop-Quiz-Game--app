@@ -1,0 +1,42 @@
+body{
+    background-color:rgb(101, 157, 203); font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #fff;
+   
+}
+h1{
+    margin-bottom: 50px;
+}
+.active{
+    font-size: 26px;font-family: Arial, Helvetica, sans-serif;
+    border: 40px 40px 5 5;
+    text-align: center;
+}
+
+#score{
+    font-size: 26px;font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+input[type="email"] 
+input[type="submit"] {
+color: white;
+}
+input[type="submit"] {
+background-color: red;
+}
+.container{
+    width: 100px;
+    height: 100px;
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* center verically and horizontally */
+    max-width: 80px;
+    margin:auto;
+    /* so if the screen goes smaller or change screen size the text will
+    stay in the center */
+
+}
+/* button */
