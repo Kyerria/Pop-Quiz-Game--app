@@ -1,1 +1,1 @@
-# Squash-the-bug-app
+# Download-your-brain!-app
