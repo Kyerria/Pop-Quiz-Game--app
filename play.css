@@ -1,0 +1,19 @@
+.option {
+    display: flex;
+    margin-bottom: 8px;
+    width: 100%;
+    font-size: 15px;
+    border: 1px solid red;
+    background-color: #fff;
+}
+
+.choice-prefix {
+    padding: 25px 26px;
+    background-color: rgb(200, 61, 30);
+    color: #ffff;
+}
+
+.choice-text {
+    padding: 8px 8px 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+}

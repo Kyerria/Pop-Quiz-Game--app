@@ -1,42 +1,66 @@
 body{
     background-color:rgb(101, 157, 203); font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    color: #fff;
+    color: #0c0000b9;
    
 }
 h1{
-    margin-bottom: 50px;
+    margin-bottom: 54px;
 }
+
 .active{
     font-size: 26px;font-family: Arial, Helvetica, sans-serif;
     border: 40px 40px 5 5;
-    text-align: center;
-}
+    /* center text and removes line underneath */
+    text-align: center; text-decoration: none;
+    color: rgb(20, 92, 20);
+    }
 
-#score{
-    font-size: 26px;font-family: Arial, Helvetica, sans-serif;
-    margin-bottom: 50px;
-    text-align: center;
-}
-
-input[type="email"] 
+input[type="email"], 
 input[type="submit"] {
 color: white;
 }
 input[type="submit"] {
-background-color: red;
+background-color:rgb(20, 92, 20);
+padding: 10px 20px 0 0;
+cursor: pointer;
+border-radius: 5px;
 }
-.container{
-    width: 100px;
-    height: 100px;
-    display:flex;
-    justify-content: center;
-    align-items: flex-end;
-    /* center verically and horizontally */
-    max-width: 80px;
-    margin:auto;
-    /* so if the screen goes smaller or change screen size the text will
-    stay in the center */
+.option {
+    display: flex;
+    margin-bottom: 9px;
+ /* Makes space between the each answer box  */
+    width: 100%;
+    font-size: 28.8px;
+    border:0.1rem solid green;
+    background-color: #ffff;
+}
+.choice-prefix{
+    padding: 27px 45px;
+    color:#ffff;
 
 }
-/* button */
+.choice-text{
+    padding:1.5rem;
+}
+.button {
+    background-color: #04AA6D; /* Green */
+    border: 1px 0 0 0 ;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+.button:hover{
+    cursor: pointer;
+    background-color: red;
+    box-shadow: 0 8px 8px 0;
+    transform:scale(1.1);
+}
+button:disabled {
+    transform: none;
+    cursor: not-allowed;
+    box-shadow: none;
+}

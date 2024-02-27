@@ -9,26 +9,43 @@
     <title>Quiz App</title>
 </head>
 <body>
-  <div class= "container"></div>
+  <div class= "container">
+    <h1>
+        Pop Quiz <br>
+        Game
+      </h1>
+  </div>
+  <div id="home" class="flex-center flex column"></div>
   
 </div>
 <header>
-  <h1>
-    Pop Quiz <br>
-    Game
-  </h1>
+  
+  <!-- home page -->
+ 
   <nav>
-    <a href="#" class ="active"> Play</a> <br>
-    <a href="#" id = "score">Highpoints</a>
+<!-- this way clicking on Play and Scorepoints will not navigate to another
+page but will stay on the same page. But I want to replace the "#" with an url
+to naviagte to. So I changed the "#" to /play.html and /score.html and .css for both-->
+    <a href="play.html" class="active">Play</a> <br>
+    
   </nav>
+  <h2>
+    Hello class, let's get started. 
+</h2>
 </header>
 
 
     <!-- Further code here -->
-    <div class=".container">
+    
+
+    <div class="container">
         <input type="email" placeholder="Your email">
         <input type="name" placeholder="Your name">
         <input type="submit">
+
+
+
+   
     <script src="script.js"></script>
 </body>
 </html>
