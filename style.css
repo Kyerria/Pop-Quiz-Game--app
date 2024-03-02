@@ -4,9 +4,10 @@ body {
     font-size:30px;
     background-repeat: no-repeat;
     background-position: cover; background-size:  100%;
-    color: rgb(20, 92, 20);
+    color: rgb(3, 50, 3);
     font-family: Arial, sans-serif;
 }
+
 h1{
     margin-bottom: 54px;
 }

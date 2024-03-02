@@ -54,7 +54,7 @@ button:disabled {
     box-shadow: none;
     /* The removes the style when the button is not being used. */
 }
-.correct-answer {
+/* .correct-answer {
     background-color: red;
     color: white;
-}
+} */
