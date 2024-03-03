@@ -122,10 +122,3 @@ document.querySelector('.button').addEventListener('click', nextQuestion);
 
 
 
-
-//cost answerChoices
-//formattedQuestions.answer = Math.floor(Math.random() * 5) + 1;
-//answerChoices.splice(formatedQuestion.answer - 1, 0, 
-//loadedQuestion.correct_answer);
-//})
-
