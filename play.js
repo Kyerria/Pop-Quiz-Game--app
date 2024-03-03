@@ -1,7 +1,7 @@
 
 const question = document.getElementById('question');
 // const choice = document.getElementsByClassName("text");
-const choiceButtons = document.querySelectorAll('.option .text');
+const choicePrefixButtons = document.querySelectorAll('.choice-prefix');
 const options = document.getElementsByClassName('text');
 const nextButton = document.querySelector('.button');
 let currentQuestion = {}; //object
@@ -17,7 +17,7 @@ function startGame(){
 
 function nextUpdate(choices) {
     // updates the choices for the current question 
-    choiceButtons.forEach((button, index) => {
+    choicePrefixButtons.forEach((button, index) => {
         // updates each the answers content of each choice button
         button.textContent = choices['choice' + (index + 1)];
         //object is choice. array index starts at 0. so choice + 0+1= choice1
@@ -26,6 +26,8 @@ function nextUpdate(choices) {
             const selectedChoice = button.textContent;
             //takes the text of the choice to the current button
             const correctChoice = currentQuestion.correct_answer;
+            console.log(selectedChoice);
+            console.log(correctChoice)
             //to get the correct answer for the current question
             if(selectedChoice === correctChoice) {
                 button.classList.add('correct-answer');
@@ -112,6 +114,7 @@ availableQuestions.splice(questionIndex, 1);
 //splice remove or replace existing or new element. 
 
 };
+
 
 document.querySelector('.button').addEventListener('click', nextQuestion);
 //Adds an event to the next button when clicked on

@@ -14,7 +14,7 @@ body{
 .choice-prefix {
     padding: 25px 26px;
     /* space/padding aroung the Letter */
-    background-color: rgb(31, 19, 17);
+    background-color:rgb(31, 19, 17);
     color: #ffff;
     cursor: pointer;
     /* Added an point for the answer choices */
@@ -54,7 +54,7 @@ button:disabled {
     box-shadow: none;
     /* The removes the style when the button is not being used. */
 }
-/* .correct-answer {
+.correct-answer {
     background-color: red;
     color: white;
-} */
+}
