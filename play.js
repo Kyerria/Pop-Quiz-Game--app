@@ -1,8 +1,8 @@
 
-const question = document.getElementById('question');
-// const choice = document.getElementsByClassName("text");
-const choicePrefixButtons = document.querySelectorAll('.choice-prefix');
-const options = document.getElementsByClassName('text');
+
+
+const choiceButtons = document.querySelectorAll('.choice-prefix');
+// const options = document.getElementsByClassName('text');
 const nextButton = document.querySelector('.button');
 let currentQuestion = {}; //object
 let acceptAnswers = true;
@@ -17,17 +17,16 @@ function startGame(){
 
 function nextUpdate(choices) {
     // updates the choices for the current question 
-    choicePrefixButtons.forEach((button, index) => {
+    choiceButtons.forEach((button, index) => {
         // updates each the answers content of each choice button
         button.textContent = choices['choice' + (index + 1)];
         //object is choice. array index starts at 0. so choice + 0+1= choice1
-        button.addEventListener('click', function (){
-            //the event is click and will be executed when button is clicked.
+        button.addEventListener('click', function () {
+        
             const selectedChoice = button.textContent;
             //takes the text of the choice to the current button
             const correctChoice = currentQuestion.correct_answer;
-            console.log(selectedChoice);
-            console.log(correctChoice)
+            
             //to get the correct answer for the current question
             if(selectedChoice === correctChoice) {
                 button.classList.add('correct-answer');
@@ -50,14 +49,14 @@ if(response.status === 429){
 return response.json();
 })
 
-.then(fixedQuestions => {
-    console.log(fixedQuestions);
-    const formattedQuestions = fixedQuestions.results.map(fixedQuestion => {
+.then(questions => {
+    console.log(questions);
+    const formattedQuestions = questions.results.map(question => {
         //Array of formmated questions by mapping over each question
         const formattedQuestion = {
-            question: fixedQuestion.question,
-            correct_answer: fixedQuestion.correct_answer,
-            answers: [...fixedQuestion.incorrect_answers, fixedQuestion.correct_answer]
+            question: question.question,
+            correct_answer: question.correct_answer,
+            answers: [...question.incorrect_answers, question.correct_answer]
         };
     return formattedQuestion;
     });
@@ -88,7 +87,7 @@ return response.json();
     console.log('error occured:',error);
 });
 
-const Max_Questions = 5;
+const MaxQuestions = 5;
 
 const nextQuestion = () => {
     //display the next question after clicking next button up to 5 then the game is over.
@@ -99,7 +98,7 @@ return;
 
 questionNumber++;
 const questionIndex = Math.floor(Math.random() * availableQuestions.length);
-//get an randon question by rounding down to the nearest interger.
+
 //question index range from 0 number to 4 number. 
 currentQuestion = availableQuestions[questionIndex];
 questionElement.textContent = currentQuestion.question;
